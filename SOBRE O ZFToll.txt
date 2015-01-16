@@ -1,0 +1,17 @@
+Para não esquecer!
+
+*   INSTALAR O ZFTool: Navegue até a raiz do nosso projeto no terminal e digite 
+    o seguinte comando:
+
+    ~/> composer.phar require zendframework/zftool:dev-master 
+
+
+*   Agora vamos criar nosso módulo Contato. Para isso digite o seguinte comando na 
+    raiz do seu projeto no terminal:
+
+    ~/> ./vendor/bin/zf.php create module Contato
+
+*   Quando criamos nosso cotroller com o ZFTool, uma action e uma view index serão 
+    criados automaticamente para gente. Veja o comando:
+
+    ~/> ./vendor/bin/zf.php create controller Home Contato
