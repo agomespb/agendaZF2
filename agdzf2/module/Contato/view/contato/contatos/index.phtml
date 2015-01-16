@@ -1,6 +1,6 @@
 <div class="topo-table">
     <a href="<?php echo $this->url('contatos', array('action' => 'novo'))?>" class="btn btn-success" title="Novo"><span class="glyphicon glyphicon-plus"></span></a>
-    
+ 
     <div class="btn-group" title="Quantidades por Página">
         <button type="button" class="btn btn-default">005</button>
         <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
@@ -48,9 +48,11 @@
                     <td class="text-center">--x--</td>
                     <td><?php echo date('d/m/Y',mktime (0, 0, 0, date("m"),  $i,  date("Y"))); ?></td>
                     <td>
+                        
                         <a class="btn btn-xs btn-info" title="Visualizar" href="<?php echo $this->url('contatos', array("action" => "detalhes", "id" => $i,)); ?>"><span class="glyphicon glyphicon-new-window"></span></a>
                         <a class="btn btn-xs btn-warning" title="Editar" href="<?php echo $this->url('contatos', array("action" => "editar", "id" => $i,)); ?>"><span class="glyphicon glyphicon-edit"></span></a>
-                        <a class="btn btn-xs btn-danger" title="Deletar" href="<?php echo $this->url('contatos', array("action" => "deletar", "id" => $i,)); ?>"><span class="glyphicon glyphicon-floppy-remove"></span></a>
+                        <a class="btn btn-xs btn-danger" title="Deletar" href="<?php echo $this->url('contatos', array("action" => "deletar", "id" => $i,)); ?>"><span class="glyphicon glyphicon-floppy-remove"></span></a>                        
+                        
                     </td>
                 </tr>
             <?php endfor; ?>
@@ -71,7 +73,7 @@
 
 $(function(){
     // variável para conter a url deletar
-    var url_deletar     = '<?php echo $this->url('contatos', array("action" => "deletar")); ?>' + '/';
+    var url_deletar = '<?php echo $this->url('contatos', array("action" => "deletar")); ?>' + '/';
  
     // qualquer link que tiver a url deletar vai sofrer um evento quando for clicada
     $("a[href*='" + url_deletar + "']").click(function (event) {
